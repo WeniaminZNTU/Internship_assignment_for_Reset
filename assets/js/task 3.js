@@ -31,7 +31,7 @@ outputArray.push(firstAndLastStr);
             blankPart += ' ';
         }
 
-        outputArray.push(`${blankPart}${massage}*`);
+        outputArray.push(`*${blankPart}${massage}*`);
 
     }
 
@@ -40,7 +40,6 @@ outputArray.push(firstAndLastStr);
         const stringLength = string.length;
 
         if(stringLength > lineSize){
-            console.log('in');
             for(let i = 0; i < lineSize; i++){
                     if(string[i] === ' '){
                         point = i;
