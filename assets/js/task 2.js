@@ -1,11 +1,13 @@
 'use strict';
 
-export const task2 = (initialData= 
+const  dataTask2 = 
     [
         [1,2,3,2,7],
         [4,5,6,8,1],
         [7,8,9,4,5]
-    ]) => {
+    ];
+
+function fTask2(initialData){
 
     if(initialData.length != 3){
         return null;
@@ -14,16 +16,16 @@ export const task2 = (initialData=
     const results = [];
     const temp = [];
 
-    for(let Ya = 0, Yb = 1, Yc = 2, i = 0; i < initialData[0].length; i++){
+    for(let A = 0, B = 1, C = 2, i = 0; i < initialData[0].length; i++){
             if(i < 2){
-                temp.push(initialData[Ya][i]);
-                temp.push(initialData[Yb][i]);
-                temp.push(initialData[Yc][i]);
+                temp.push(initialData[A][i]);
+                temp.push(initialData[B][i]);
+                temp.push(initialData[C][i]);
             }
             else{
-                temp.push(initialData[Ya][i]);
-                temp.push(initialData[Yb][i]);
-                temp.push(initialData[Yc][i]);
+                temp.push(initialData[A][i]);
+                temp.push(initialData[B][i]);
+                temp.push(initialData[C][i]);
 
                 for(let i = 1; i < 10; i++){
 
@@ -49,3 +51,5 @@ export const task2 = (initialData=
 
 return results;
 }
+
+export { fTask2, dataTask2 };

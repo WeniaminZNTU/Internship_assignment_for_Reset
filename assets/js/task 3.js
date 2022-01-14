@@ -1,18 +1,23 @@
 'use strict';
 
-export const task3 = (inputArray = 
-[
-    ['Hello','world'],
-    ['Brad','come','to','dinner','with','us'],
-    ['He','loves','tacos']
-], 
-formattingValues = ['LEFT','RIGHT','LEFT'], 
-lineSize = 16) => {
+const dataTask3 = {
+    value1:[
+        ['Hello','world'],
+        ['Brad','come','to','dinner','with','us'],
+        ['He','loves','tacos']
+    ],
+    value2:['LEFT','RIGHT','LEFT'],
+    value3: 16
+}
+
+
+
+const fTask3 = ( inputArray, formattingValues, lineSize ) => {
 
 const outputArray = [];
-let firstAndLastStr = '';
+let firstAndLastStr = ''.padStart((lineSize + 2), '*');
 
-for(let i = 0; i < (lineSize + 2); i++) firstAndLastStr += '*';
+firstAndLastStr += '*';
 
 outputArray.push(firstAndLastStr);
 
@@ -25,7 +30,7 @@ outputArray.push(firstAndLastStr);
     }
 
     const formattingSmallRight = (massage) => {
-        let blankPart = '*';
+        let blankPart = '';
 
         for(let i = 0; i < (lineSize - massage.length); i++){
             blankPart += ' ';
@@ -110,3 +115,5 @@ outputArray.push(firstAndLastStr);
 
 return outputArray;
 }
+
+export { dataTask3, fTask3};
